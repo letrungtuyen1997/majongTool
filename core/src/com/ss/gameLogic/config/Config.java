@@ -18,6 +18,9 @@ public class Config {
     public static float         paddingX            = 3;
     public static float         paddingY            = 3;
     public static float         duraMove            = 1;
+    public static float         TileW               = 93;
+    public static float         TileH               = 120;
+
 
     public static int           quanLayer           = 10;
     public static int           quanAni             = 40;

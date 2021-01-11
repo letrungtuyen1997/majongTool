@@ -53,6 +53,7 @@ public class gameScene extends GScreen {
   public void init() {
 
     GStage.addToLayer(GLayer.ui,group);
+
     Image bg = GUI.createImage(TextureAtlasC.uiAtlas,"bg");
     bg.setSize(GStage.getWorldWidth(),GStage.getWorldHeight());
     group.addActor(bg);
