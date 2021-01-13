@@ -37,9 +37,11 @@ public class baseScene extends GScreen {
     bg.setSize(GStage.getWorldWidth(),GStage.getWorldHeight());
     group.addActor(bg);
     createBg();
+    group.setSize(GStage.getWorldWidth(),GStage.getWorldHeight());
+//    group.debugAll();
 
     Button btnExport = GUI.createTextButton(TextureAtlasC.uiAtlas.findRegion("btnYellow"),BitmapFontC.font_white,"xuất");
-    btnExport.setPosition(GStage.getWorldWidth()/2-btnExport.getWidth()/2,GStage.getWorldHeight()-btnExport.getHeight(), Align.center);
+    btnExport.setPosition(btnExport.getWidth(),GStage.getWorldHeight()/2-btnExport.getHeight(), Align.center);
     group.addActor(btnExport);
     btnExport.addListener(new ClickListener(){
       @Override
@@ -49,7 +51,7 @@ public class baseScene extends GScreen {
       }
     });
     Button btnReset = GUI.createTextButton(TextureAtlasC.uiAtlas.findRegion("btnYellow"),BitmapFontC.font_white,"reset");
-    btnReset.setPosition(GStage.getWorldWidth()/2+btnReset.getWidth()/2,GStage.getWorldHeight()-btnReset.getHeight(), Align.center);
+    btnReset.setPosition(btnReset.getWidth(),GStage.getWorldHeight()/2+btnReset.getHeight(), Align.center);
     group.addActor(btnReset);
     btnReset.addListener(new ClickListener(){
       @Override
@@ -89,11 +91,25 @@ public class baseScene extends GScreen {
   public void setArrTile(Tile tile){
     arrTile.add(tile);
   }
+  public void removeTile(Tile tile){
+    System.out.println("check index: "+arrTile.indexOf(tile,true));
+    arrTile.removeIndex(arrTile.indexOf(tile,true));
+    tile.dispose();
+    System.out.println("check arrtile: "+arrTile.size);
+    setTextTile2();
+
+  }
   public void setTextTile(){
     countTile++;
     float s = (float)countTile/4;
     text.setText(countTile+" số cặp: "+s);
   }
+  public void setTextTile2(){
+    countTile--;
+    float s = (float)countTile/4;
+    text.setText(countTile+" số cặp: "+s);
+  }
+
 
 
 }

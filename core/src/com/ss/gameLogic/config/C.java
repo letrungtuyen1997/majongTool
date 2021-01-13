@@ -45,13 +45,13 @@ public class C {
         public static String lbCheckConnect="";
 
         static void initLocalize() {
-            String deviceLang = GMain.platform.GetDefaultLanguage();
-            System.out.println("language: "+deviceLang);
-            FileHandle specFilehandle = Gdx.files.internal("i18n/lang_" + deviceLang);
+//            String deviceLang = GMain.platform.GetDefaultLanguage();
+//            System.out.println("language: "+deviceLang);
+//            FileHandle specFilehandle = Gdx.files.internal("i18n/lang_" + deviceLang);
             FileHandle baseFileHandle = Gdx.files.internal("i18n/lang");
 
             try {
-                locale = I18NBundle.createBundle(specFilehandle, new Locale(""));
+//                locale = I18NBundle.createBundle(specFilehandle, new Locale(""));
                 idcontry = locale.get("idcontry");
                 System.out.println("tryyyyyyyyy");
             }

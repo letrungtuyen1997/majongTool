@@ -52,7 +52,7 @@ public class GAssetsManager {
    }
 
    public static void addToLog(String var0) {
-      GMain.platform.log("addToLog : " + var0);
+//      GMain.platform.log("addToLog : " + var0);
       tempResLog.add(var0);
    }
 
@@ -90,7 +90,7 @@ public class GAssetsManager {
 
       TextureAtlas var2 = getTextureAtlas(var0);
       if(var2 == null) {
-         GMain.platform.CrashLog("error(getTextureRegionFromAtlas) : " + var0);
+//         GMain.platform.CrashLog("error(getTextureRegionFromAtlas) : " + var0);
          return null;
       } else {
          return var2.findRegion(var1);
@@ -110,7 +110,7 @@ public class GAssetsManager {
             return var4;
          }
 
-         GMain.platform.CrashLog("error(getBitmapFont) : " + var3);
+//         GMain.platform.CrashLog("error(getBitmapFont) : " + var3);
          var1 = null;
       }
 
@@ -126,7 +126,7 @@ public class GAssetsManager {
             finishLoading();
             Object var4 = getRes(var0, Object.class);
             if(var4 == null) {
-               GMain.platform.log("无法加载数据资源(getGameData) : " + var0);
+//               GMain.platform.log("无法加载数据资源(getGameData) : " + var0);
                return null;
             }
 
@@ -134,7 +134,7 @@ public class GAssetsManager {
             return var4;
          }
 
-         GMain.platform.log("数据资源没有加载(getGameData) : " + var0);
+//         GMain.platform.log("数据资源没有加载(getGameData) : " + var0);
          var2 = null;
       }
 
@@ -155,7 +155,7 @@ public class GAssetsManager {
             return var4;
          }
 
-         GMain.platform.log("getMusic : " + var3);
+//         GMain.platform.log("getMusic : " + var3);
          var1 = null;
       }
 
@@ -177,7 +177,7 @@ public class GAssetsManager {
          }
 
 
-         GMain.platform.CrashLog("error(getParticleEffect) : " + var3);
+//         GMain.platform.CrashLog("error(getParticleEffect) : " + var3);
          var1 = null;
       }
 
@@ -197,7 +197,7 @@ public class GAssetsManager {
             return var4;
          }
 
-         GMain.platform.CrashLog("error(getPixmap) : " + var3);
+//         GMain.platform.CrashLog("error(getPixmap) : " + var3);
          var1 = null;
       }
 
@@ -238,7 +238,7 @@ public class GAssetsManager {
             return var4;
          }
 
-         GMain.platform.CrashLog("error(getSound) : " + var3);
+//         GMain.platform.CrashLog("error(getSound) : " + var3);
          var1 = null;
       }
 
@@ -268,8 +268,8 @@ public class GAssetsManager {
             return var4;
          }
 
-         GMain.platform.log("getTextureAtlas failed: " + var3);
-         GMain.platform.CrashLog("getTextureAtlas failed: " + var3);
+//         GMain.platform.log("getTextureAtlas failed: " + var3);
+//         GMain.platform.CrashLog("getTextureAtlas failed: " + var3);
          var1 = null;
       }
 
@@ -285,14 +285,14 @@ public class GAssetsManager {
          finishLoading();
          var1 = (Texture)getRes(var3, Texture.class);
          if(var1 == null) {
-            GMain.platform.CrashLog("error(getTexture) : " + var3);
+//            GMain.platform.CrashLog("error(getTexture) : " + var3);
             return null;
          }
 
          addToLog(var3 + "---------" + "Texture.class");
       }
 
-      GMain.platform.log(var3 + " ******** " + var1.getTextureData().getFormat());
+//      GMain.platform.log(var3 + " ******** " + var1.getTextureData().getFormat());
       TextureRegion var4 = new TextureRegion(var1);
       var4.flip(false, true);
       return var4;

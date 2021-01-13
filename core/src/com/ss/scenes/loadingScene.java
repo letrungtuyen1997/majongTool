@@ -47,7 +47,7 @@ public class loadingScene extends GScreen {
         super.show();
             if(firstShow == false) {
                 firstShow = true;
-                GMain.platform.Onshow();
+//                GMain.platform.Onshow();
             }
     }
 

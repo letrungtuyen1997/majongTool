@@ -202,7 +202,7 @@ public class tileBg {
       @Override
       public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         setLayer();
-        Tile tile = new Tile(group,null);
+        Tile tile = new Tile(group,null,baseScene);
         tile.setRowCol(row,col);
         tile.setLayer(arrLayer);
         tile.setPos(XYLeftUp().x, XYLeftUp().y,(int)XYLeftUp().z,false);
@@ -215,7 +215,7 @@ public class tileBg {
       @Override
       public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         setLayer();
-        Tile tile = new Tile(group,null);
+        Tile tile = new Tile(group,null,baseScene);
         tile.setRowCol(row,col);
         tile.setLayer(arrLayer);
         tile.setPos(XYCenterUp().x, XYCenterUp().y,(int)XYCenterUp().z,false);
@@ -229,7 +229,7 @@ public class tileBg {
       @Override
       public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         setLayer();
-        Tile tile = new Tile(group,null);
+        Tile tile = new Tile(group,null,baseScene);
         tile.setRowCol(row,col);
         tile.setLayer(arrLayer);
         tile.setPos(XYRightUp().x, XYRightUp().y,(int)XYRightUp().z,false);
@@ -243,7 +243,7 @@ public class tileBg {
       @Override
       public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         setLayer();
-        Tile tile = new Tile(group,null);
+        Tile tile = new Tile(group,null,baseScene);
         tile.setRowCol(row,col);
         tile.setLayer(arrLayer);
         tile.setPos(XYLeftCenter().x, XYLeftCenter().y,(int)XYLeftCenter().z,false);
@@ -257,7 +257,7 @@ public class tileBg {
       @Override
       public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         setLayer();
-        Tile tile = new Tile(group,null);
+        Tile tile = new Tile(group,null,baseScene);
         tile.setRowCol(row,col);
         tile.setLayer(arrLayer);
         tile.setPos(XYCenter().x, XYCenter().y,(int)XYCenter().z,false);
@@ -271,7 +271,7 @@ public class tileBg {
       @Override
       public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         setLayer();
-        Tile tile = new Tile(group,null);
+        Tile tile = new Tile(group,null,baseScene);
         tile.setRowCol(row,col);
         tile.setLayer(arrLayer);
         tile.setPos(XYRightCenter().x, XYRightCenter().y,(int)XYRightCenter().z,false);
@@ -285,7 +285,7 @@ public class tileBg {
       @Override
       public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         setLayer();
-        Tile tile = new Tile(group,null);
+        Tile tile = new Tile(group,null,baseScene);
         tile.setRowCol(row,col);
         tile.setLayer(arrLayer);
         tile.setPos(XYLefttDown().x, XYLefttDown().y,(int)XYLefttDown().z,false);
@@ -299,7 +299,7 @@ public class tileBg {
       @Override
       public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         setLayer();
-        Tile tile = new Tile(group,null);
+        Tile tile = new Tile(group,null,baseScene);
         tile.setRowCol(row,col);
         tile.setLayer(arrLayer);
         tile.setPos(XYCenterDown().x, XYCenterDown().y,(int)XYCenterDown().z,false);
@@ -313,7 +313,7 @@ public class tileBg {
       @Override
       public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
         setLayer();
-        Tile tile = new Tile(group,null);
+        Tile tile = new Tile(group,null,baseScene);
         tile.setRowCol(row,col);
         tile.setLayer(arrLayer);
         tile.setPos(XYRightDown().x, XYRightDown().y,(int)XYRightDown().z,false);

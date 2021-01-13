@@ -2,7 +2,6 @@ package com.ss;
 
 import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.assets.AssetManager;
-import com.platform.IPlatform;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.ss.core.exSprite.particle.GParticleSystem;
@@ -22,12 +21,11 @@ public class GMain extends GDirectedGame {
   public static float ratioX, ratioY;
 
   public static Preferences prefs;
-  public static IPlatform platform;
   public static AssetManager assetManager;
 
-  public GMain(IPlatform plat){
-    platform = plat;
-  }
+//  public GMain(IPlatform plat){
+//    platform = plat;
+//  }
 
   private void init()
   {
@@ -105,7 +103,7 @@ public class GMain extends GDirectedGame {
 
   public void dispose()
   {
-    GMain.platform.log("############## gmain dispose");
+//    GMain.platform.log("############## gmain dispose");
     GParticleSystem.saveAllFreeMin();
     super.dispose();
   }
@@ -113,28 +111,15 @@ public class GMain extends GDirectedGame {
     //platform.SetDailyNotification(1, "PopKite", "Bạn ơi chạm để quay lại vượt thử thách nào!!", 1, 19);
     //platform.SetDailyNotification(3, "PopKite", "mèo nhớ bạn!!", 3, 19);
     //platform.SetDailyNotification(7, "Lieng 2020", "Bam vao nhan duoc bao nhieu tien", 7, 18);
-    int noId = platform.GetNotifyId();
-    if(noId==-1){
+//    int noId = platform.GetNotifyId();
+//    if(noId==-1){
       //binhthuong
-    } else if(noId == 1){
+//    } else if(noId == 1){
       //thuong
-    }
+//    }
   }
 
 
-  public static native void openTextField(String title, String defaultValue, IPlatform.OnPopupCallback callback)/*-{
-            $wnd.openPopup(title, defaultValue, function(v){
-                callback.@com.platform.IPlatform.OnPopupCallback::OnValue(Ljava/lang/String;)(v);
-            });
-        }-*/;
-  public static native void shareFb( IPlatform.OnShareCallback callback)/*-{
-            $wnd.shareFB(function(v){
-                callback.@com.platform.IPlatform.OnShareCallback::OnValue(Z)(v);
-            });
-        }-*/;
-  public static native String FormatDate( String s)/*-{
-            return $wnd.FormatDate(s);
-        }-*/;
 
 
 }

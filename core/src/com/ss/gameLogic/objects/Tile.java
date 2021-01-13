@@ -18,6 +18,7 @@ import com.ss.core.action.exAction.GSimpleAction;
 import com.ss.core.util.GStage;
 import com.ss.core.util.GUI;
 import com.ss.gameLogic.config.Config;
+import com.ss.scenes.baseScene;
 import com.ss.scenes.gameScene;
 
 public class Tile {
@@ -32,11 +33,16 @@ public class Tile {
   public  int             kind;
   private Label           IdLb;
   private Group           gr = new Group();
-  public Tile(Group group, gameScene gameScene){
+  private baseScene       baseScene;
+  public Tile(Group group, gameScene gameScene,baseScene baseScene){
+    this.baseScene  = baseScene;
     this.gameScene  = gameScene;
     group.addActor(gr);
     if(gameScene!=null){
       addevent();
+    }
+    if(baseScene!=null){
+      addEvent2();
     }
 
   }
@@ -175,6 +181,16 @@ public class Tile {
           select(true);
           gameScene.checkMatch(Tile.this);
         }
+        return super.touchDown(event, x, y, pointer, button);
+      }
+    });
+  }
+  private void addEvent2(){
+    gr.addListener(new ClickListener(){
+      @Override
+      public boolean touchDown(InputEvent event, float x, float y, int pointer, int button) {
+        baseScene.removeTile(Tile.this);
+
         return super.touchDown(event, x, y, pointer, button);
       }
     });

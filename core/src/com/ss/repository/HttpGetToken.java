@@ -45,11 +45,11 @@ public class HttpGetToken {
             public void handleHttpResponse(Net.HttpResponse httpResponse) {
 
                 status = httpResponse.getStatus().getStatusCode();
-                GMain.platform.log("check get token: "+status);
+//                GMain.platform.log("check get token: "+status);
                 System.out.println("here: "+status);
                // if(status==200){
                     String data = httpResponse.getResultAsString();
-                    GMain.platform.log("check get token: "+data);
+//                    GMain.platform.log("check get token: "+data);
 
                     JsonValue jv = utils.GetJsV(data);
                     getData.getInfo(jv);

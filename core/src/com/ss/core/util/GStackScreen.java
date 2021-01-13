@@ -22,7 +22,7 @@ public class GStackScreen {
 
    private static void printStack() {
       for(int var0 = 0; var0 < vector.size(); ++var0) {
-         GMain.platform.log((String)vector.get(var0));
+//         GMain.platform.log((String)vector.get(var0));
       }
 
    }

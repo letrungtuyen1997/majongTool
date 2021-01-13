@@ -53,3 +53,28 @@ task afterEclipseImport(description: "Post processing after project generation",
     printer.print(classpath)
   }
 }
+task deleteJar(type: Delete) {
+    delete 'libs/jars/logmanagementlib.jar'
+}
+
+task createJar(type: Copy) {
+    from('build/intermediates/bundles/release/')
+    into('libs/jars/')
+    include('classes.jar')
+    rename('classes.jar', 'logmanagementlib.jar')
+}
+task dist2DParticles (type: Jar) {
+    from files(sourceSets.main.java.outputDir)
+    from files(sourceSets.main.output.resourcesDir)
+    from {configurations.compile.collect {zipTree(it)}}
+    from files('[assets]')
+
+    archiveName = "tool.jar"
+
+    manifest {
+        attributes 'Main-Class': project.ext.mainClassName
+    }
+}
+
+
+createJar.dependsOn(deleteJar, build)

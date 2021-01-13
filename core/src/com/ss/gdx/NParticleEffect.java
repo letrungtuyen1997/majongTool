@@ -50,7 +50,7 @@ public class NParticleEffect extends ParticleEffect {
             StreamUtils.closeQuietly((Closeable) bufferedReader);
         }
         catch (Exception e){
-            GMain.platform.log("load Emitter failed " + fileHandle.name());
+//            GMain.platform.log("load Emitter failed " + fileHandle.name());
         }
 
     }

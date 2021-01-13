@@ -51,7 +51,7 @@ public class NParticleEmitter extends ParticleEmitter {
             string2 = NParticleEmitter.readVesion((String) line);
         }
         catch(Exception e){
-            GMain.platform.log("Error loading emitter " + line + " " + e.getMessage());
+//            GMain.platform.log("Error loading emitter " + line + " " + e.getMessage());
             string2 = null;
             line = "error1";
         }
@@ -136,7 +136,7 @@ public class NParticleEmitter extends ParticleEmitter {
             name = readString((BufferedReader) bufferedReader, (String) "name");
         }
         catch(Exception e){
-            GMain.platform.log("load_v6 name failed " + e.getMessage());
+//            GMain.platform.log("load_v6 name failed " + e.getMessage());
             name = "error";
         }
         this.setName(name);

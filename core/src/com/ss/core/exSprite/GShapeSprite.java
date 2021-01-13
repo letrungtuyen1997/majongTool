@@ -227,7 +227,7 @@ public class GShapeSprite extends Group {
 
       public void draw(Batch var1, float var2) {
          if(this.type < 0) {
-            GMain.platform.log("no set shape !!!!!!!!  " + this.type);
+//            GMain.platform.log("no set shape !!!!!!!!  " + this.type);
          } else {
             ShapeRenderer var6 = GShapeTools.getShapeRenderer();
             var1.end();

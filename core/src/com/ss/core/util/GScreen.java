@@ -127,7 +127,7 @@ public abstract class GScreen implements Screen {
 
    public void debugPaint(String var1) {
       if(this.isDebug) {
-         GMain.platform.log(var1);
+//         GMain.platform.log(var1);
       }
 
    }

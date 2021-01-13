@@ -110,7 +110,7 @@ public class gameScene extends GScreen {
   }
   private void createBoard(){
     for (Tile T : arrTile){
-      Tile t = new Tile(group,this);
+      Tile t = new Tile(group,this,null);
       t.setRowCol((int)T.getRowCol().x,(int)T.getRowCol().y);
       t.setLayer2(T.getLayer());
       t.setPos(T.getXY().x+T.block.getWidth()/2,T.getXY().y+T.block.getHeight()/2,T.getKind(),false);

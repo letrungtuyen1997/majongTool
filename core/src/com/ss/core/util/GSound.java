@@ -245,7 +245,7 @@ public class GSound {
 
    public static void resumeSound() {
       if(Gdx.graphics.getType() == Graphics.GraphicsType.WebGL){
-         GMain.platform.log("resume sound not implement");
+//         GMain.platform.log("resume sound not implement");
       }
       else {
          Iterator var0 = soundPool.values().iterator();
@@ -263,7 +263,7 @@ public class GSound {
 
    private static void setLoopSoundVolume(float var0) {
       if(Gdx.graphics.getType() == Graphics.GraphicsType.WebGL){
-         GMain.platform.log("loop sound volume not implement");
+//         GMain.platform.log("loop sound volume not implement");
       }
       else {
          Iterator var1 = loopSound.values().iterator();
