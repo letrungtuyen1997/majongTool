@@ -183,6 +183,13 @@ public class tileBg {
     }
     return -1;
   }
+  private int checkLayerUdo(){
+    for(int i=arrLayer.size-1;i>=0;i--){
+      if(arrLayer.get(i)==true)
+        return i;
+    }
+    return -1;
+  }
   public void resetLayer(){
     arrLayer.clear();
     initArrLayer();
@@ -194,6 +201,12 @@ public class tileBg {
     int indexLayer = checkLayer();
     if(indexLayer!=-1){
       arrLayer.set(indexLayer,true);
+    }
+  }
+  public void setLayerUndo(){
+    int indexLayer = checkLayerUdo();
+    if(indexLayer!=-1){
+      arrLayer.set(indexLayer,false);
     }
   }
   private void addEvent(){

@@ -97,10 +97,21 @@ public class baseScene extends GScreen {
   public void removeTile(Tile tile){
     System.out.println("check index: "+arrTile.indexOf(tile,true));
     arrTile.removeIndex(arrTile.indexOf(tile,true));
+    resetLayer(tile.getRowCol().x,tile.getRowCol().y);
     tile.dispose();
     System.out.println("check arrtile: "+arrTile.size);
     setTextTile2();
 
+  }
+  private void resetLayer(float row, float col){
+    for (int i=0;i<arrTileBg.size;i++){
+      if(arrTileBg.get(i).getRow()==row && arrTileBg.get(i).getCol()==col){
+        arrTileBg.get(i).setLayerUndo();
+        System.out.println("undo tile");
+        return;
+      }
+
+    }
   }
   public void setTextTile(){
     countTile++;
