@@ -53,6 +53,8 @@ public class gameScene extends GScreen {
   public void init() {
 
     GStage.addToLayer(GLayer.ui,group);
+    group.setSize(720,1280);
+    group.setPosition(GStage.getWorldWidth()/2,GStage.getWorldHeight()/2,Align.center);
 
     Image bg = GUI.createImage(TextureAtlasC.uiAtlas,"bg");
     bg.setSize(GStage.getWorldWidth(),GStage.getWorldHeight());
@@ -61,7 +63,7 @@ public class gameScene extends GScreen {
     createBoard();
     setLockTile();
     for (Tile t: arrTileBoard){
-      createLv((int)t.getRowCol().x,(int)t.getRowCol().y,t.getLayer(),t.getXY().x+t.block.getWidth()/2,t.getXY().y+t.block.getHeight()/2,t.getKind(),t.getId());
+      createLv((int)t.getRowCol().x,(int)t.getRowCol().y,t.getLayer(),t.getXY().x+t.block.getWidth()*0.75f,t.getXY().y+t.block.getHeight()/2,t.getKind(),t.getId());
     }
     save(arrJSLevel,Gdx.files.local("data/data.txt"));
 

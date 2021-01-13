@@ -34,14 +34,17 @@ public class baseScene extends GScreen {
   public void init() {
     GStage.addToLayer(GLayer.ui,group);
     Image bg = GUI.createImage(TextureAtlasC.uiAtlas,"bg");
-    bg.setSize(GStage.getWorldWidth(),GStage.getWorldHeight());
+    bg.setSize(720,1280);
     group.addActor(bg);
-    createBg();
-    group.setSize(GStage.getWorldWidth(),GStage.getWorldHeight());
+    group.setSize(720,1280);
+    group.setPosition(GStage.getWorldWidth()/2,GStage.getWorldHeight()/2,Align.center);
 //    group.debugAll();
+    createBg();
+
+
 
     Button btnExport = GUI.createTextButton(TextureAtlasC.uiAtlas.findRegion("btnYellow"),BitmapFontC.font_white,"xuất");
-    btnExport.setPosition(btnExport.getWidth(),GStage.getWorldHeight()/2-btnExport.getHeight(), Align.center);
+    btnExport.setPosition(-300,GStage.getWorldHeight()/2-btnExport.getHeight(), Align.center);
     group.addActor(btnExport);
     btnExport.addListener(new ClickListener(){
       @Override
@@ -51,7 +54,7 @@ public class baseScene extends GScreen {
       }
     });
     Button btnReset = GUI.createTextButton(TextureAtlasC.uiAtlas.findRegion("btnYellow"),BitmapFontC.font_white,"reset");
-    btnReset.setPosition(btnReset.getWidth(),GStage.getWorldHeight()/2+btnReset.getHeight(), Align.center);
+    btnReset.setPosition(-300,GStage.getWorldHeight()/2+btnReset.getHeight(), Align.center);
     group.addActor(btnReset);
     btnReset.addListener(new ClickListener(){
       @Override
@@ -62,7 +65,7 @@ public class baseScene extends GScreen {
     });
 
     text = new Label(""+countTile,new Label.LabelStyle(BitmapFontC.FontAlert,null));
-    text.setPosition(50,50);
+    text.setPosition(-700,50);
     group.addActor(text);
   }
 

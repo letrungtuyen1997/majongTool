@@ -14,7 +14,7 @@ public class Config {
     public static boolean       remoteEffect        = Boolean.parseBoolean(Gdx.files.internal("uri/effect.txt").readString());
     public static int           condi_merge         = Integer.parseInt(Gdx.files.internal("uri/condi_merge.txt").readString());
     public static int           row                 = 10;
-    public static int           col                 = 10;
+    public static int           col                 = 8;
     public static float         paddingX            = 3;
     public static float         paddingY            = 3;
     public static float         duraMove            = 1;

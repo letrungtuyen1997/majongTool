@@ -52,12 +52,11 @@ public class tileBg {
   private baseScene     baseScene;
   public tileBg(Group group, int  i, int j,baseScene baseScene){
     this.baseScene = baseScene;
-    GStage.addToLayer(GLayer.top,gr);
     this.group = group;
     row=i;
     col=j;
     block = GUI.createImage(TextureAtlasC.uiAtlas,"titlebg");
-    block.setPosition((GStage.getWorldWidth()/2- Config.col/2*block.getWidth())+j*block.getWidth(),(GStage.getWorldHeight()/2- Config.row/2*block.getHeight())+i*block.getHeight());
+    block.setPosition((group.getWidth()/2- Config.col/2*block.getWidth())+j*block.getWidth(),(GStage.getWorldHeight()/2- Config.row/2*block.getHeight())+i*block.getHeight());
     group.addActor(block);
     //// lb ///////////
     Label lb = new Label("["+row+","+col+"]",new Label.LabelStyle(BitmapFontC.font_white,null));
@@ -66,6 +65,11 @@ public class tileBg {
     lb.setPosition(block.getX(Align.center),block.getY(Align.center)+10,Align.center);
     group.addActor(lb);
     lb.getColor().a=0.5f;
+
+    GStage.addToLayer(GLayer.top,gr);
+//    gr.setSize(720,1280);
+//    gr.setOrigin(Align.center);
+    gr.setPosition(group.getX(),group.getY());
 
     //////// leftUp /////////
     bodyLeftTop.set(block.getX()-block.getWidth()*sclW/2,block.getY()-block.getHeight()*sclH/2,block.getWidth()*sclW,block.getHeight()*sclH);
@@ -121,11 +125,6 @@ public class tileBg {
     bodyRightBottom2.createRectangle(true, bodyRightBottom.getX(), bodyRightBottom.getY(), bodyRightBottom.width, bodyRightBottom.height);
     bodyRightBottom2.setColor(239/255f,11/255f,11/255f,alpha);
     gr.addActor(bodyRightBottom2);
-
-
-
-
-
 
     x=block.getX()+block.getWidth()/2;
     y=block.getY()+block.getHeight()/2;
